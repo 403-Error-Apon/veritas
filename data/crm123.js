@@ -7,7 +7,7 @@ window.STUDY_DATA.crm123 = {
   "accent": "#39766e",
   "objective": "Analyses the role of policing in society, its historical evolution, the effectiveness of policing techniques, modern police departments, their structure and strategies.",
   "studyReady": true,
-  "lectureLabel": "History of Policing · Lectures 01 & 02",
+  "lectureLabel": "History of Policing",
   "syllabus": [
     {
       "title": "Policing and types of policing",
@@ -176,7 +176,9 @@ window.STUDY_DATA.crm123 = {
         "Policing",
         "Law and order",
         "Police reform"
-      ]
+      ],
+      "chapterId": "crm123-s02",
+      "subchapterId": "origins"
     },
     {
       "id": "kin",
@@ -205,7 +207,9 @@ window.STUDY_DATA.crm123 = {
         "Kin policing",
         "Norms",
         "Customary rules"
-      ]
+      ],
+      "chapterId": "crm123-s02",
+      "subchapterId": "kin"
     },
     {
       "id": "greek-rome",
@@ -238,7 +242,9 @@ window.STUDY_DATA.crm123 = {
         "Magistrate",
         "Praefectus urbi",
         "Patrol"
-      ]
+      ],
+      "chapterId": "crm123-s02",
+      "subchapterId": "greek-rome"
     },
     {
       "id": "nightwatch",
@@ -267,7 +273,9 @@ window.STUDY_DATA.crm123 = {
         "Nightwatch",
         "Warden",
         "Watchman"
-      ]
+      ],
+      "chapterId": "crm123-s02",
+      "subchapterId": "nightwatch"
     },
     {
       "id": "england",
@@ -329,7 +337,9 @@ window.STUDY_DATA.crm123 = {
         "Hue and cry",
         "Thief-takers",
         "Bow Street Runners"
-      ]
+      ],
+      "chapterId": "crm123-s02",
+      "subchapterId": "england"
     },
     {
       "id": "peel",
@@ -365,7 +375,9 @@ window.STUDY_DATA.crm123 = {
         "Municipal policing",
         "Territorial policing",
         "Beat"
-      ]
+      ],
+      "chapterId": "crm123-s02",
+      "subchapterId": "peel"
     },
     {
       "id": "usa-theories",
@@ -399,7 +411,9 @@ window.STUDY_DATA.crm123 = {
         "Crime-control theory",
         "Class-control theory",
         "Urban-dispersion theory"
-      ]
+      ],
+      "chapterId": "crm123-s02",
+      "subchapterId": "usa-theories"
     },
     {
       "id": "sheriff",
@@ -433,7 +447,9 @@ window.STUDY_DATA.crm123 = {
         "Marshal",
         "Bailiff",
         "Contract policing"
-      ]
+      ],
+      "chapterId": "crm123-s02",
+      "subchapterId": "sheriff"
     },
     {
       "id": "vigilance",
@@ -466,7 +482,9 @@ window.STUDY_DATA.crm123 = {
         "Vigilance committee",
         "Vigilante",
         "Lynching"
-      ]
+      ],
+      "chapterId": "crm123-s02",
+      "subchapterId": "vigilance"
     },
     {
       "id": "technology",
@@ -494,7 +512,9 @@ window.STUDY_DATA.crm123 = {
         "Two-way radio",
         "Patrol car",
         "FBI"
-      ]
+      ],
+      "chapterId": "crm123-s02",
+      "subchapterId": "technology"
     },
     {
       "id": "eras",
@@ -530,209 +550,291 @@ window.STUDY_DATA.crm123 = {
         "Community Policing",
         "Homeland Security",
         "USA PATRIOT Act"
-      ]
+      ],
+      "chapterId": "crm123-s02",
+      "subchapterId": "eras"
     }
   ],
   "terms": [
     {
       "name": "Kin policing",
       "definition": "Enforcement of informal and customary rules by a family, clan or tribe.",
-      "category": "Foundations"
+      "category": "Foundations",
+      "chapterId": "crm123-s02",
+      "subchapterId": "kin"
     },
     {
       "name": "Norms",
       "definition": "Informal or customary rules of conduct within a group.",
-      "category": "Foundations"
+      "category": "Foundations",
+      "chapterId": "crm123-s02",
+      "subchapterId": "kin"
     },
     {
       "name": "Magistrate",
       "definition": "An appointed official responsible for maintaining law and order in the examples given in the lecture.",
-      "category": "Foundations"
+      "category": "Foundations",
+      "chapterId": "crm123-s02",
+      "subchapterId": "greek-rome"
     },
     {
       "name": "Praefectus urbi",
       "definition": "The form of Rome’s first paid police officer, dated in the lecture to 27 BC.",
-      "category": "Foundations"
+      "category": "Foundations",
+      "chapterId": "crm123-s02",
+      "subchapterId": "greek-rome"
     },
     {
       "name": "Nightwatch",
       "definition": "A system in which citizens patrolled at night to protect a city and look for problems.",
-      "category": "Early systems"
+      "category": "Early systems",
+      "chapterId": "crm123-s02",
+      "subchapterId": "nightwatch"
     },
     {
       "name": "Warden",
       "definition": "An appointed official created by legislation in 1749, authorized to hire watchmen.",
-      "category": "Early systems"
+      "category": "Early systems",
+      "chapterId": "crm123-s02",
+      "subchapterId": "nightwatch"
     },
     {
       "name": "Watchman",
       "definition": "A person employed or assigned to patrol and watch for problems, fires or crime.",
-      "category": "Early systems"
+      "category": "Early systems",
+      "chapterId": "crm123-s02",
+      "subchapterId": "origins"
     },
     {
       "name": "Frankpledge",
       "definition": "An English system for keeping order, overseen by sheriffs in the lecture’s account.",
-      "category": "Europe"
+      "category": "Europe",
+      "chapterId": "crm123-s02",
+      "subchapterId": "england"
     },
     {
       "name": "Tithing",
       "definition": "A group of 10 families in the Frankpledge hierarchy.",
-      "category": "Europe"
+      "category": "Europe",
+      "chapterId": "crm123-s02",
+      "subchapterId": "eras"
     },
     {
       "name": "Hundred",
       "definition": "A group of 10 tithings, approximately 100 families.",
-      "category": "Europe"
+      "category": "Europe",
+      "chapterId": "crm123-s02",
+      "subchapterId": "origins"
     },
     {
       "name": "Shire",
       "definition": "Several hundreds; the lecture calls these parishes and compares them with a contemporary county.",
-      "category": "Europe"
+      "category": "Europe",
+      "chapterId": "crm123-s02",
+      "subchapterId": "sheriff"
     },
     {
       "name": "Posse comitatus",
       "definition": "A group of men over 15 called to pursue fleeing felons.",
-      "category": "Europe"
+      "category": "Europe",
+      "chapterId": "crm123-s02",
+      "subchapterId": "england"
     },
     {
       "name": "Statute of Winchester",
       "definition": "A 1285 statute requiring every hundred to appoint two constables to assist the sheriff.",
-      "category": "Europe"
+      "category": "Europe",
+      "chapterId": "crm123-s02",
+      "subchapterId": "england"
     },
     {
       "name": "Constable",
       "definition": "An officer who investigated, served summons and warrants, took charge of prisoners and supervised the night watch.",
-      "category": "Europe"
+      "category": "Europe",
+      "chapterId": "crm123-s02",
+      "subchapterId": "nightwatch"
     },
     {
       "name": "Justice of the Peace",
       "definition": "An office established in England in the 1200s, assisting in the administration of law.",
-      "category": "Europe"
+      "category": "Europe",
+      "chapterId": "crm123-s02",
+      "subchapterId": "england"
     },
     {
       "name": "Hue and cry",
       "definition": "A method of calling on the community to pursue or report a suspected offender.",
-      "category": "Europe"
+      "category": "Europe",
+      "chapterId": "crm123-s02",
+      "subchapterId": "england"
     },
     {
       "name": "Thief-taker",
       "definition": "A person employed to catch thieves.",
-      "category": "Europe"
+      "category": "Europe",
+      "chapterId": "crm123-s02",
+      "subchapterId": "origins"
     },
     {
       "name": "Bow Street Runners",
       "definition": "Early detective units mentioned in the lecture.",
-      "category": "Europe"
+      "category": "Europe",
+      "chapterId": "crm123-s02",
+      "subchapterId": "peel"
     },
     {
       "name": "Municipal policing",
       "definition": "Government-supported policing organized for a city or municipality.",
-      "category": "Modern policing"
+      "category": "Modern policing",
+      "chapterId": "crm123-s02",
+      "subchapterId": "peel"
     },
     {
       "name": "Territorial policing",
       "definition": "A strategy in which officers patrol assigned areas or beats, traditionally on foot.",
-      "category": "Modern policing"
+      "category": "Modern policing",
+      "chapterId": "crm123-s02",
+      "subchapterId": "origins"
     },
     {
       "name": "Beat",
       "definition": "A prescribed patrol area assigned to an officer.",
-      "category": "Modern policing"
+      "category": "Modern policing",
+      "chapterId": "crm123-s02",
+      "subchapterId": "origins"
     },
     {
       "name": "Disorder-control theory",
       "definition": "The theory that police departments developed to address riots and mob violence.",
-      "category": "United States"
+      "category": "United States",
+      "chapterId": "crm123-s02",
+      "subchapterId": "usa-theories"
     },
     {
       "name": "Crime-control theory",
       "definition": "The theory that police departments developed in response to rising crime and fear of crime.",
-      "category": "United States"
+      "category": "United States",
+      "chapterId": "crm123-s02",
+      "subchapterId": "usa-theories"
     },
     {
       "name": "Class-control theory",
       "definition": "The theory that police departments developed as a means of social and economic control that protected elite interests.",
-      "category": "United States"
+      "category": "United States",
+      "chapterId": "crm123-s02",
+      "subchapterId": "usa-theories"
     },
     {
       "name": "Urban-dispersion theory",
       "definition": "The theory that police departments were an expected part of local government as cities developed.",
-      "category": "United States"
+      "category": "United States",
+      "chapterId": "crm123-s02",
+      "subchapterId": "usa-theories"
     },
     {
       "name": "Sheriff",
       "definition": "An elected county law-enforcement official in the US lecture account, with civil and criminal duties.",
-      "category": "United States"
+      "category": "United States",
+      "chapterId": "crm123-s02",
+      "subchapterId": "sheriff"
     },
     {
       "name": "Marshal",
       "definition": "A town or city law-enforcement officer in the lecture’s description of US policing.",
-      "category": "United States"
+      "category": "United States",
+      "chapterId": "crm123-s02",
+      "subchapterId": "origins"
     },
     {
       "name": "Vigilance committee",
       "definition": "A voluntary organized group that responded to perceived threats and protected property or power.",
-      "category": "United States"
+      "category": "United States",
+      "chapterId": "crm123-s02",
+      "subchapterId": "vigilance"
     },
     {
       "name": "Vigilante",
       "definition": "A watchman or guard; in the lecture, a person involved in extralegal enforcement.",
-      "category": "United States"
+      "category": "United States",
+      "chapterId": "crm123-s02",
+      "subchapterId": "vigilance"
     },
     {
       "name": "Lynching",
       "definition": "A form of extrajudicial punishment described in the lecture, including hanging.",
-      "category": "United States"
+      "category": "United States",
+      "chapterId": "crm123-s02",
+      "subchapterId": "vigilance"
     },
     {
       "name": "Political Era",
       "definition": "A period dated 1840s–1930s, marked in the notes by political influence and fragmented local policing.",
-      "category": "Eras"
+      "category": "Eras",
+      "chapterId": "crm123-s02",
+      "subchapterId": "eras"
     },
     {
       "name": "Reform / Professional Era",
       "definition": "A period dated 1930s–1980s, associated with centralized administration, specialization and professionalization.",
-      "category": "Eras"
+      "category": "Eras",
+      "chapterId": "crm123-s02",
+      "subchapterId": "eras"
     },
     {
       "name": "Social Upheaval Era",
       "definition": "The 1960s–1970s period associated with civil rights activity, antiwar sentiment and urban riots.",
-      "category": "Eras"
+      "category": "Eras",
+      "chapterId": "crm123-s02",
+      "subchapterId": "eras"
     },
     {
       "name": "Community Policing Era",
       "definition": "A period dated 1980s–2000s, emphasizing community relations, foot patrol and problem-solving.",
-      "category": "Eras"
+      "category": "Eras",
+      "chapterId": "crm123-s02",
+      "subchapterId": "eras"
     },
     {
       "name": "Homeland Security Era",
       "definition": "A period dated 2001–present, associated in the notes with post-9/11 security and intelligence gathering.",
-      "category": "Eras"
+      "category": "Eras",
+      "chapterId": "crm123-s02",
+      "subchapterId": "eras"
     },
     {
       "name": "Call box",
       "definition": "A communication device used to contact police before widespread mobile communications.",
-      "category": "Technology"
+      "category": "Technology",
+      "chapterId": "crm123-s02",
+      "subchapterId": "technology"
     },
     {
       "name": "Teletype",
       "definition": "A teleprinter-based communication system listed among police technologies.",
-      "category": "Technology"
+      "category": "Technology",
+      "chapterId": "crm123-s02",
+      "subchapterId": "origins"
     },
     {
       "name": "Computer-aided dispatch",
       "definition": "A computer system used to support the dispatching of police services.",
-      "category": "Technology"
+      "category": "Technology",
+      "chapterId": "crm123-s02",
+      "subchapterId": "origins"
     },
     {
       "name": "Crime analysis",
       "definition": "The use of information and analysis to understand crime patterns and support policing.",
-      "category": "Technology"
+      "category": "Technology",
+      "chapterId": "crm123-s02",
+      "subchapterId": "origins"
     },
     {
       "name": "FBI",
       "definition": "Federal Bureau of Investigation; established in 1908 and named in 1909 according to the notes.",
-      "category": "Technology"
+      "category": "Technology",
+      "chapterId": "crm123-s02",
+      "subchapterId": "technology"
     }
   ],
   "timeline": [
@@ -740,283 +842,233 @@ window.STUDY_DATA.crm123 = {
       "date": "594 BC",
       "title": "Greek magistrates appointed",
       "place": "Greece",
-      "detail": "The lecture describes appointed, unpaid magistrates responsible for maintaining law and order."
+      "detail": "The lecture describes appointed, unpaid magistrates responsible for maintaining law and order.",
+      "chapterId": "crm123-s02",
+      "subchapterId": "greek-rome"
     },
     {
       "date": "3rd century BC",
       "title": "Roman magistrates appointed",
       "place": "Rome",
-      "detail": "Rome appointed magistrates to maintain law and order."
+      "detail": "Rome appointed magistrates to maintain law and order.",
+      "chapterId": "crm123-s02",
+      "subchapterId": "greek-rome"
     },
     {
       "date": "27 BC",
       "title": "Praefectus urbi",
       "place": "Rome",
-      "detail": "The lecture identifies this as Rome’s first paid police officer."
+      "detail": "The lecture identifies this as Rome’s first paid police officer.",
+      "chapterId": "crm123-s02",
+      "subchapterId": "greek-rome"
     },
     {
       "date": "6 AD",
       "title": "Day and night patrols",
       "place": "Rome",
-      "detail": "Day and night patrols are listed for this date."
+      "detail": "Day and night patrols are listed for this date.",
+      "chapterId": "crm123-s02",
+      "subchapterId": "greek-rome"
     },
     {
       "date": "8th century",
       "title": "Sheriff’s office established",
       "place": "England",
-      "detail": "The lecture places the establishment of the sheriff’s office in 8th-century England."
+      "detail": "The lecture places the establishment of the sheriff’s office in 8th-century England.",
+      "chapterId": "crm123-s02",
+      "subchapterId": "england"
     },
     {
       "date": "12th century",
       "title": "Frankpledge system and sheriffs",
       "place": "England",
-      "detail": "Sheriffs were appointed by the king to levy taxes and ensure the Frankpledge system worked."
+      "detail": "Sheriffs were appointed by the king to levy taxes and ensure the Frankpledge system worked.",
+      "chapterId": "crm123-s02",
+      "subchapterId": "england"
     },
     {
       "date": "12th–13th centuries",
       "title": "Kings assume legal authority",
       "place": "Europe",
-      "detail": "After the Roman Empire, the lecture describes anarchy followed by kings assuming legal authority."
+      "detail": "After the Roman Empire, the lecture describes anarchy followed by kings assuming legal authority.",
+      "chapterId": "crm123-s02",
+      "subchapterId": "kin"
     },
     {
       "date": "1200s",
       "title": "Justice of the Peace",
       "place": "England",
-      "detail": "The Office of Justice of the Peace was established in England in the 1200s."
+      "detail": "The Office of Justice of the Peace was established in England in the 1200s.",
+      "chapterId": "crm123-s02",
+      "subchapterId": "england"
     },
     {
       "date": "1285",
       "title": "Statute of Winchester",
       "place": "England",
-      "detail": "Every hundred was required to appoint two constables to assist the sheriff."
+      "detail": "Every hundred was required to appoint two constables to assist the sheriff.",
+      "chapterId": "crm123-s02",
+      "subchapterId": "england"
     },
     {
       "date": "1749",
       "title": "Warden created by law",
       "place": "United States",
-      "detail": "The warden could hire watchmen; selected watchmen were paid by the city from taxes."
+      "detail": "The warden could hire watchmen; selected watchmen were paid by the city from taxes.",
+      "chapterId": "crm123-s02",
+      "subchapterId": "nightwatch"
     },
     {
       "date": "Late 1700s",
       "title": "Urbanization pressures local systems",
       "place": "England",
-      "detail": "Families moved to towns for work, while the older arrangements struggled to maintain social order."
+      "detail": "Families moved to towns for work, while the older arrangements struggled to maintain social order.",
+      "chapterId": "crm123-s02",
+      "subchapterId": "england"
     },
     {
       "date": "Early–mid 1800s",
       "title": "Day watch systems",
       "place": "United States",
-      "detail": "Day watch systems were used in the USA."
+      "detail": "Day watch systems were used in the USA.",
+      "chapterId": "crm123-s02",
+      "subchapterId": "usa-theories"
     },
     {
       "date": "1800s",
       "title": "Municipal policing develops",
       "place": "England / USA",
-      "detail": "Class 1 connects Peel with municipal policing in response to rising mob violence."
+      "detail": "Class 1 connects Peel with municipal policing in response to rising mob violence.",
+      "chapterId": "crm123-s02",
+      "subchapterId": "peel"
     },
     {
       "date": "1822",
       "title": "Peel appointed Home Secretary",
       "place": "England",
-      "detail": "Robert Peel was appointed Home Secretary, responsible for internal security in England."
+      "detail": "Robert Peel was appointed Home Secretary, responsible for internal security in England.",
+      "chapterId": "crm123-s02",
+      "subchapterId": "peel"
     },
     {
       "date": "1840s–1930s",
       "title": "Political Era",
       "place": "United States",
-      "detail": "Policing was strongly influenced by local political and social conflicts."
+      "detail": "Policing was strongly influenced by local political and social conflicts.",
+      "chapterId": "crm123-s02",
+      "subchapterId": "eras"
     },
     {
       "date": "1850s",
       "title": "24-hour police service",
       "place": "United States",
-      "detail": "Day and night watch systems provided 24-hour service."
+      "detail": "Day and night watch systems provided 24-hour service.",
+      "chapterId": "crm123-s02",
+      "subchapterId": "usa-theories"
     },
     {
       "date": "1870",
       "title": "Beat system spreads",
       "place": "United States",
-      "detail": "The beat system spread to major US cities."
+      "detail": "The beat system spread to major US cities.",
+      "chapterId": "crm123-s02",
+      "subchapterId": "usa-theories"
     },
     {
       "date": "1870s",
       "title": "Most US cities have some police",
       "place": "United States",
-      "detail": "By the 1870s, almost all US cities had some form of police."
+      "detail": "By the 1870s, almost all US cities had some form of police.",
+      "chapterId": "crm123-s02",
+      "subchapterId": "usa-theories"
     },
     {
       "date": "1878",
       "title": "Telephones at stations",
       "place": "United States",
-      "detail": "The lecture records telephones at police stations."
+      "detail": "The lecture records telephones at police stations.",
+      "chapterId": "crm123-s02",
+      "subchapterId": "usa-theories"
     },
     {
       "date": "1903",
       "title": "First Boston motor patrol",
       "place": "United States",
-      "detail": "The first motor patrol was established in Boston using a Stanley Steamer automobile."
+      "detail": "The first motor patrol was established in Boston using a Stanley Steamer automobile.",
+      "chapterId": "crm123-s02",
+      "subchapterId": "usa-theories"
     },
     {
       "date": "1908",
       "title": "FBI established",
       "place": "United States",
-      "detail": "The Federal Bureau of Investigation was established; it was named in 1909."
+      "detail": "The Federal Bureau of Investigation was established; it was named in 1909.",
+      "chapterId": "crm123-s02",
+      "subchapterId": "usa-theories"
     },
     {
       "date": "1920",
       "title": "18th Amendment",
       "place": "United States",
-      "detail": "The notes connect the 18th Amendment with a new public mandate for crime control and public safety."
+      "detail": "The notes connect the 18th Amendment with a new public mandate for crime control and public safety.",
+      "chapterId": "crm123-s02",
+      "subchapterId": "usa-theories"
     },
     {
       "date": "1920s",
       "title": "Crime news broadcast",
       "place": "United States",
-      "detail": "Major crime news was broadcast to the public and to police in squad cars."
+      "detail": "Major crime news was broadcast to the public and to police in squad cars.",
+      "chapterId": "crm123-s02",
+      "subchapterId": "usa-theories"
     },
     {
       "date": "1929",
       "title": "Chicago police radio receiving sets",
       "place": "United States",
-      "detail": "The Chicago Police Department Detective Division was equipped with radio receiving sets."
+      "detail": "The Chicago Police Department Detective Division was equipped with radio receiving sets.",
+      "chapterId": "crm123-s02",
+      "subchapterId": "usa-theories"
     },
     {
       "date": "1929",
       "title": "Great Depression begins",
       "place": "United States",
-      "detail": "The notes connect the onset of the Great Depression with a new public mandate for crime control and safety."
+      "detail": "The notes connect the onset of the Great Depression with a new public mandate for crime control and safety.",
+      "chapterId": "crm123-s02",
+      "subchapterId": "usa-theories"
     },
     {
       "date": "1930s–1980s",
       "title": "Reform / Professional Era",
       "place": "United States",
-      "detail": "Centralized administration, specialized units, merit-based recruitment and professionalization."
+      "detail": "Centralized administration, specialized units, merit-based recruitment and professionalization.",
+      "chapterId": "crm123-s02",
+      "subchapterId": "eras"
     },
     {
       "date": "1960s–1970s",
       "title": "Era of Social Upheaval",
       "place": "United States",
-      "detail": "Civil rights activity, antiwar sentiment, urban riots and emphasis on police education and training."
+      "detail": "Civil rights activity, antiwar sentiment, urban riots and emphasis on police education and training.",
+      "chapterId": "crm123-s02",
+      "subchapterId": "usa-theories"
     },
     {
       "date": "1980s–2000s",
       "title": "Community Policing Era",
       "place": "United States",
-      "detail": "Community relations, foot patrol, proactive and problem-oriented policing, and computer systems."
+      "detail": "Community relations, foot patrol, proactive and problem-oriented policing, and computer systems.",
+      "chapterId": "crm123-s02",
+      "subchapterId": "usa-theories"
     },
     {
       "date": "2001–present",
       "title": "Homeland Security Era",
       "place": "United States",
-      "detail": "Following 9/11, the War on Terrorism and USA PATRIOT Act are connected with intelligence gathering."
-    }
-  ],
-  "principles": [
-    {
-      "title": "Prevent crime and disorder",
-      "summary": "Prevention is the basic mission of the police.",
-      "detail": "The basic mission for which the police exist is to prevent crime and disorder."
-    },
-    {
-      "title": "Public approval",
-      "summary": "The ability of police to perform their duties depends on public approval of police actions.",
-      "detail": "The ability of the police to perform their duties is dependent upon public approval of police actions."
-    },
-    {
-      "title": "Public cooperation",
-      "summary": "Police must secure the willing cooperation of the public in voluntary observance of the law.",
-      "detail": "Police must secure the willing cooperation of the public in voluntary observance of the law to be able to secure and maintain the respect of the public."
-    },
-    {
-      "title": "Less force, more cooperation",
-      "summary": "The public cooperation that can be secured diminishes as the necessity for physical force increases.",
-      "detail": "The degree of cooperation of the public that can be secured diminishes proportionately to the necessity of the use of physical force."
-    },
-    {
-      "title": "Impartial service",
-      "summary": "Police preserve public favor by demonstrating impartial service to the law, not by catering to public opinion.",
-      "detail": "Police seek and preserve public favor not by catering to public opinion but by constantly demonstrating absolute impartial service to the law."
-    },
-    {
-      "title": "Use force only when needed",
-      "summary": "Physical force should be used only to the extent necessary when persuasion, advice and warning are insufficient.",
-      "detail": "Police use physical force to the extent necessary to secure observance of the law or to restore order only when the exercise of persuasion, advice and warning is found to be insufficient."
-    },
-    {
-      "title": "Police are the public",
-      "summary": "Police should maintain a relationship in which police and public are connected; police are members of the public paid to give full-time attention to shared duties.",
-      "detail": "Police, at all times, should maintain a relationship with the public that gives reality to the historic tradition that the police are the public and the public are the police; the police being only members of the public who are paid to give full-time attention to duties which are incumbent on every citizen in the interests of community welfare and existence."
-    },
-    {
-      "title": "Respect judicial authority",
-      "summary": "Police should direct action toward their functions and never appear to usurp the powers of the judiciary.",
-      "detail": "Police should always direct their action strictly towards their functions and never appear to usurp the powers of the judiciary."
-    },
-    {
-      "title": "Absence of crime is the test",
-      "summary": "Police efficiency is measured by the absence of crime and disorder, not visible police action.",
-      "detail": "The test of police efficiency is the absence of crime and disorder, not the visible evidence of police action in dealing with it."
-    }
-  ],
-  "eras": [
-    {
-      "title": "Political Era",
-      "date": "1840s–1930s",
-      "description": "Political and social conflicts shaped policing in diverse cities.",
-      "points": [
-        "Lack of central authority to establish a mandate",
-        "Small departments acted independently within jurisdictions",
-        "Large departments were divided into precincts that often operated as individual departments",
-        "Officers represented the local political party more than the legal system",
-        "Conflict with rioters, union workers, management and looters"
-      ]
-    },
-    {
-      "title": "Reform / Professional Era",
-      "date": "1930s–1980s",
-      "description": "Partisan policing and fragmented services led to demands for reorganization and professionalization.",
-      "points": [
-        "Strong centralized administrative bureaucracy",
-        "Highly specialized units and increased numbers of officers",
-        "Hiring and promotion based on merit",
-        "Police role shifted toward crime fighting",
-        "Application of science to crime"
-      ]
-    },
-    {
-      "title": "Social Upheaval Era",
-      "date": "1960s–1970s",
-      "description": "Social and political upheaval brought police into the center of public conflict.",
-      "points": [
-        "Crime rate doubled, according to the lecture",
-        "Civil Rights Movement began",
-        "Antiwar sentiment and urban riots",
-        "Emphasis on education and training"
-      ]
-    },
-    {
-      "title": "Community Policing Era",
-      "date": "1980s–2000s",
-      "description": "The notes emphasize trust, recognizable officers, community problem-solving and new information systems.",
-      "points": [
-        "Increasing distrust",
-        "Foot patrol and recognizable officers over car patrols",
-        "Community relations programs developed in the 1960s",
-        "Problem-oriented and proactive policing",
-        "Community problem-solving and reduced social distance",
-        "Crime analysis, records management, computer-aided dispatch and 911"
-      ]
-    },
-    {
-      "title": "Homeland Security Era",
-      "date": "2001–present",
-      "description": "The post-9/11 period brought renewed emphasis on security and intelligence gathering.",
-      "points": [
-        "War on Terrorism",
-        "USA PATRIOT Act following 9/11",
-        "Gathering, processing and disseminating information",
-        "Return of an intelligence-gathering component"
-      ]
+      "detail": "Following 9/11, the War on Terrorism and USA PATRIOT Act are connected with intelligence gathering.",
+      "chapterId": "crm123-s02",
+      "subchapterId": "usa-theories"
     }
   ],
   "quiz": [
@@ -1030,7 +1082,9 @@ window.STUDY_DATA.crm123 = {
       ],
       "a": 0,
       "why": "The lecture lists identifying enduring aspects, evaluating previous reforms and anticipating future developments.",
-      "cat": "Foundations"
+      "cat": "Foundations",
+      "chapterId": "crm123-s02",
+      "subchapterId": "origins"
     },
     {
       "q": "In kin policing, who enforced customary rules?",
@@ -1042,7 +1096,9 @@ window.STUDY_DATA.crm123 = {
       ],
       "a": 1,
       "why": "Kin policing relied on family, clan or tribe enforcement, with members having some authority.",
-      "cat": "Foundations"
+      "cat": "Foundations",
+      "chapterId": "crm123-s02",
+      "subchapterId": "kin"
     },
     {
       "q": "The lecture dates the appointment of Greek magistrates to:",
@@ -1054,7 +1110,9 @@ window.STUDY_DATA.crm123 = {
       ],
       "a": 0,
       "why": "594 BC is the date given for Greek magistrates.",
-      "cat": "Foundations"
+      "cat": "Foundations",
+      "chapterId": "crm123-s02",
+      "subchapterId": "greek-rome"
     },
     {
       "q": "The praefectus urbi is described as:",
@@ -1066,7 +1124,9 @@ window.STUDY_DATA.crm123 = {
       ],
       "a": 1,
       "why": "The lecture identifies the praefectus urbi as Rome’s first paid police officer in 27 BC.",
-      "cat": "Foundations"
+      "cat": "Foundations",
+      "chapterId": "crm123-s02",
+      "subchapterId": "greek-rome"
     },
     {
       "q": "What happened in Rome in 6 AD according to the notes?",
@@ -1078,7 +1138,9 @@ window.STUDY_DATA.crm123 = {
       ],
       "a": 2,
       "why": "The lecture lists day and night patrols for 6 AD.",
-      "cat": "Foundations"
+      "cat": "Foundations",
+      "chapterId": "crm123-s02",
+      "subchapterId": "origins"
     },
     {
       "q": "What was the Frankpledge hierarchy, in the order given in the lecture?",
@@ -1090,7 +1152,9 @@ window.STUDY_DATA.crm123 = {
       ],
       "a": 1,
       "why": "The sequence is Tithing (10 families), Hundred (10 tithings), Shire (several hundreds), Kingdom.",
-      "cat": "Europe"
+      "cat": "Europe",
+      "chapterId": "crm123-s02",
+      "subchapterId": "kin"
     },
     {
       "q": "A tithing consisted of:",
@@ -1102,7 +1166,9 @@ window.STUDY_DATA.crm123 = {
       ],
       "a": 1,
       "why": "The lecture defines a tithing as 10 families.",
-      "cat": "Europe"
+      "cat": "Europe",
+      "chapterId": "crm123-s02",
+      "subchapterId": "origins"
     },
     {
       "q": "The posse comitatus was formed to:",
@@ -1114,7 +1180,9 @@ window.STUDY_DATA.crm123 = {
       ],
       "a": 2,
       "why": "Men over 15 could be called to pursue fleeing felons.",
-      "cat": "Europe"
+      "cat": "Europe",
+      "chapterId": "crm123-s02",
+      "subchapterId": "england"
     },
     {
       "q": "The Statute of Winchester was passed in:",
@@ -1126,7 +1194,9 @@ window.STUDY_DATA.crm123 = {
       ],
       "a": 1,
       "why": "The lecture dates the Statute of Winchester to 1285.",
-      "cat": "Europe"
+      "cat": "Europe",
+      "chapterId": "crm123-s02",
+      "subchapterId": "england"
     },
     {
       "q": "How many constables did the Statute of Winchester require each hundred to appoint?",
@@ -1138,7 +1208,9 @@ window.STUDY_DATA.crm123 = {
       ],
       "a": 1,
       "why": "The statute required two constables per hundred to assist the sheriff.",
-      "cat": "Europe"
+      "cat": "Europe",
+      "chapterId": "crm123-s02",
+      "subchapterId": "england"
     },
     {
       "q": "Which role was responsible for policing a county in the English arrangement described?",
@@ -1150,7 +1222,9 @@ window.STUDY_DATA.crm123 = {
       ],
       "a": 0,
       "why": "The lecture states that the county sheriff was responsible for policing a county.",
-      "cat": "Europe"
+      "cat": "Europe",
+      "chapterId": "crm123-s02",
+      "subchapterId": "sheriff"
     },
     {
       "q": "Which group emerged as early detective units in the English account?",
@@ -1162,7 +1236,9 @@ window.STUDY_DATA.crm123 = {
       ],
       "a": 1,
       "why": "The lecture describes the Bow Street Runners as early detective units.",
-      "cat": "Europe"
+      "cat": "Europe",
+      "chapterId": "crm123-s02",
+      "subchapterId": "peel"
     },
     {
       "q": "What did the 1749 law create in the USA lecture account?",
@@ -1174,7 +1250,9 @@ window.STUDY_DATA.crm123 = {
       ],
       "a": 1,
       "why": "The 1749 legislation created the position of warden.",
-      "cat": "United States"
+      "cat": "United States",
+      "chapterId": "crm123-s02",
+      "subchapterId": "usa-theories"
     },
     {
       "q": "Which theory links police department development to riots and mob violence?",
@@ -1186,7 +1264,9 @@ window.STUDY_DATA.crm123 = {
       ],
       "a": 3,
       "why": "Disorder-control theory connects the development of police departments with riots and mob violence.",
-      "cat": "United States"
+      "cat": "United States",
+      "chapterId": "crm123-s02",
+      "subchapterId": "usa-theories"
     },
     {
       "q": "Which theory describes police as a means of social and economic control that protects elite interests?",
@@ -1198,7 +1278,9 @@ window.STUDY_DATA.crm123 = {
       ],
       "a": 0,
       "why": "That is the class-control theory described in the lecture.",
-      "cat": "United States"
+      "cat": "United States",
+      "chapterId": "crm123-s02",
+      "subchapterId": "usa-theories"
     },
     {
       "q": "According to the lecture, sheriffs in the USA were generally:",
@@ -1210,7 +1292,9 @@ window.STUDY_DATA.crm123 = {
       ],
       "a": 1,
       "why": "The lecture describes US sheriffs as elected and often fee-paid officials.",
-      "cat": "United States"
+      "cat": "United States",
+      "chapterId": "crm123-s02",
+      "subchapterId": "usa-theories"
     },
     {
       "q": "Which statement about vigilance committees matches the lecture?",
@@ -1222,7 +1306,9 @@ window.STUDY_DATA.crm123 = {
       ],
       "a": 1,
       "why": "The lecture describes 19th-century vigilance committees as voluntary organized groups.",
-      "cat": "United States"
+      "cat": "United States",
+      "chapterId": "crm123-s02",
+      "subchapterId": "vigilance"
     },
     {
       "q": "Who was appointed Home Secretary in 1822 according to the notes?",
@@ -1234,7 +1320,9 @@ window.STUDY_DATA.crm123 = {
       ],
       "a": 1,
       "why": "The notes say Robert Peel was appointed Home Secretary in 1822.",
-      "cat": "Modern policing"
+      "cat": "Modern policing",
+      "chapterId": "crm123-s02",
+      "subchapterId": "peel"
     },
     {
       "q": "Territorial policing involved officers:",
@@ -1246,7 +1334,9 @@ window.STUDY_DATA.crm123 = {
       ],
       "a": 1,
       "why": "Officers were assigned beats and patrolled them on foot.",
-      "cat": "Modern policing"
+      "cat": "Modern policing",
+      "chapterId": "crm123-s02",
+      "subchapterId": "origins"
     },
     {
       "q": "What is the test of police efficiency in Peel’s ninth principle?",
@@ -1258,7 +1348,9 @@ window.STUDY_DATA.crm123 = {
       ],
       "a": 2,
       "why": "The ninth principle says efficiency is measured by absence of crime and disorder, not visible police action.",
-      "cat": "Modern policing"
+      "cat": "Modern policing",
+      "chapterId": "crm123-s02",
+      "subchapterId": "peel"
     },
     {
       "q": "The Political Era is dated in the notes as:",
@@ -1270,7 +1362,9 @@ window.STUDY_DATA.crm123 = {
       ],
       "a": 1,
       "why": "The notes date the Political Era from the 1840s to the 1930s.",
-      "cat": "Eras"
+      "cat": "Eras",
+      "chapterId": "crm123-s02",
+      "subchapterId": "eras"
     },
     {
       "q": "Which feature is associated with the Reform / Professional Era?",
@@ -1282,7 +1376,9 @@ window.STUDY_DATA.crm123 = {
       ],
       "a": 1,
       "why": "The notes associate the Reform Era with centralized administration, specialization and merit-based hiring and promotion.",
-      "cat": "Eras"
+      "cat": "Eras",
+      "chapterId": "crm123-s02",
+      "subchapterId": "eras"
     },
     {
       "q": "The Era of Social Upheaval is placed in:",
@@ -1294,7 +1390,9 @@ window.STUDY_DATA.crm123 = {
       ],
       "a": 2,
       "why": "The lecture dates Social Upheaval to the 1960s and 1970s.",
-      "cat": "Eras"
+      "cat": "Eras",
+      "chapterId": "crm123-s02",
+      "subchapterId": "eras"
     },
     {
       "q": "Which is associated with Community Policing in the notes?",
@@ -1306,7 +1404,9 @@ window.STUDY_DATA.crm123 = {
       ],
       "a": 0,
       "why": "The notes emphasize community problem-solving and reducing social distance between police and public.",
-      "cat": "Eras"
+      "cat": "Eras",
+      "chapterId": "crm123-s02",
+      "subchapterId": "eras"
     },
     {
       "q": "What is associated with the Homeland Security Era after 9/11?",
@@ -1318,257 +1418,367 @@ window.STUDY_DATA.crm123 = {
       ],
       "a": 1,
       "why": "The lecture connects the post-9/11 period with the War on Terrorism, USA PATRIOT Act and intelligence gathering.",
-      "cat": "Eras"
+      "cat": "Eras",
+      "chapterId": "crm123-s02",
+      "subchapterId": "usa-theories"
     },
     {
       "q": "The FBI was established in 1908 and named in 1909, according to the lecture.",
       "type": "tf",
       "a": true,
       "why": "This is the sequence given in the Class 1 notes.",
-      "cat": "Technology"
+      "cat": "Technology",
+      "chapterId": "crm123-s02",
+      "subchapterId": "technology"
     },
     {
       "q": "The first motor patrol was established in Chicago in 1903.",
       "type": "tf",
       "a": false,
       "why": "The lecture says the first motor patrol was established in Boston using a Stanley Steamer automobile.",
-      "cat": "Technology"
+      "cat": "Technology",
+      "chapterId": "crm123-s02",
+      "subchapterId": "technology"
     },
     {
       "q": "Community relations programs are noted as having developed in the 1960s.",
       "type": "tf",
       "a": true,
       "why": "This detail appears in the community policing notes.",
-      "cat": "Eras"
+      "cat": "Eras",
+      "chapterId": "crm123-s02",
+      "subchapterId": "eras"
     },
     {
       "q": "The Social Upheaval Era is listed as a completely separate period that does not overlap the Reform Era.",
       "type": "tf",
       "a": false,
       "why": "The dates given overlap: Reform / Professional Era is 1930s–1980s and Social Upheaval is 1960s–1970s.",
-      "cat": "Eras"
+      "cat": "Eras",
+      "chapterId": "crm123-s02",
+      "subchapterId": "eras"
     },
     {
       "q": "The lecture says vigilance committees were the same as lawless mobs.",
       "type": "tf",
       "a": false,
       "why": "The lecture explicitly distinguishes vigilance committees from lawless mobs.",
-      "cat": "United States"
+      "cat": "United States",
+      "chapterId": "crm123-s02",
+      "subchapterId": "vigilance"
     }
   ],
-  "flashcards": [
+  "referenceSets": [
     {
-      "front": "Kin policing",
-      "back": "Enforcement of informal and customary rules by a family, clan or tribe.",
-      "category": "Foundations"
+      "id": "peel-principles",
+      "title": "Peel’s Principles",
+      "group": "Principles",
+      "type": "principles",
+      "chapterId": "crm123-s02",
+      "description": "The nine principles attributed to Sir Robert Peel in the course material.",
+      "items": [
+        {
+          "title": "Prevent crime and disorder",
+          "summary": "Prevention is the basic mission of the police.",
+          "detail": "The basic mission for which the police exist is to prevent crime and disorder."
+        },
+        {
+          "title": "Public approval",
+          "summary": "The ability of police to perform their duties depends on public approval of police actions.",
+          "detail": "The ability of the police to perform their duties is dependent upon public approval of police actions."
+        },
+        {
+          "title": "Public cooperation",
+          "summary": "Police must secure the willing cooperation of the public in voluntary observance of the law.",
+          "detail": "Police must secure the willing cooperation of the public in voluntary observance of the law to be able to secure and maintain the respect of the public."
+        },
+        {
+          "title": "Less force, more cooperation",
+          "summary": "The public cooperation that can be secured diminishes as the necessity for physical force increases.",
+          "detail": "The degree of cooperation of the public that can be secured diminishes proportionately to the necessity of the use of physical force."
+        },
+        {
+          "title": "Impartial service",
+          "summary": "Police preserve public favor by demonstrating impartial service to the law, not by catering to public opinion.",
+          "detail": "Police seek and preserve public favor not by catering to public opinion but by constantly demonstrating absolute impartial service to the law."
+        },
+        {
+          "title": "Use force only when needed",
+          "summary": "Physical force should be used only to the extent necessary when persuasion, advice and warning are insufficient.",
+          "detail": "Police use physical force to the extent necessary to secure observance of the law or to restore order only when the exercise of persuasion, advice and warning is found to be insufficient."
+        },
+        {
+          "title": "Police are the public",
+          "summary": "Police should maintain a relationship in which police and public are connected; police are members of the public paid to give full-time attention to shared duties.",
+          "detail": "Police, at all times, should maintain a relationship with the public that gives reality to the historic tradition that the police are the public and the public are the police; the police being only members of the public who are paid to give full-time attention to duties which are incumbent on every citizen in the interests of community welfare and existence."
+        },
+        {
+          "title": "Respect judicial authority",
+          "summary": "Police should direct action toward their functions and never appear to usurp the powers of the judiciary.",
+          "detail": "Police should always direct their action strictly towards their functions and never appear to usurp the powers of the judiciary."
+        },
+        {
+          "title": "Absence of crime is the test",
+          "summary": "Police efficiency is measured by the absence of crime and disorder, not visible police action.",
+          "detail": "The test of police efficiency is the absence of crime and disorder, not the visible evidence of police action in dealing with it."
+        }
+      ]
     },
     {
-      "front": "Norms",
-      "back": "Informal or customary rules of conduct within a group.",
-      "category": "Foundations"
-    },
-    {
-      "front": "Magistrate",
-      "back": "An appointed official responsible for maintaining law and order in the examples given in the lecture.",
-      "category": "Foundations"
-    },
-    {
-      "front": "Praefectus urbi",
-      "back": "The form of Rome’s first paid police officer, dated in the lecture to 27 BC.",
-      "category": "Foundations"
-    },
-    {
-      "front": "Nightwatch",
-      "back": "A system in which citizens patrolled at night to protect a city and look for problems.",
-      "category": "Early systems"
-    },
-    {
-      "front": "Warden",
-      "back": "An appointed official created by legislation in 1749, authorized to hire watchmen.",
-      "category": "Early systems"
-    },
-    {
-      "front": "Watchman",
-      "back": "A person employed or assigned to patrol and watch for problems, fires or crime.",
-      "category": "Early systems"
-    },
-    {
-      "front": "Frankpledge",
-      "back": "An English system for keeping order, overseen by sheriffs in the lecture’s account.",
-      "category": "Europe"
-    },
-    {
-      "front": "Tithing",
-      "back": "A group of 10 families in the Frankpledge hierarchy.",
-      "category": "Europe"
-    },
-    {
-      "front": "Hundred",
-      "back": "A group of 10 tithings, approximately 100 families.",
-      "category": "Europe"
-    },
-    {
-      "front": "Shire",
-      "back": "Several hundreds; the lecture calls these parishes and compares them with a contemporary county.",
-      "category": "Europe"
-    },
-    {
-      "front": "Posse comitatus",
-      "back": "A group of men over 15 called to pursue fleeing felons.",
-      "category": "Europe"
-    },
-    {
-      "front": "Statute of Winchester",
-      "back": "A 1285 statute requiring every hundred to appoint two constables to assist the sheriff.",
-      "category": "Europe"
-    },
-    {
-      "front": "Constable",
-      "back": "An officer who investigated, served summons and warrants, took charge of prisoners and supervised the night watch.",
-      "category": "Europe"
-    },
-    {
-      "front": "Justice of the Peace",
-      "back": "An office established in England in the 1200s, assisting in the administration of law.",
-      "category": "Europe"
-    },
-    {
-      "front": "Hue and cry",
-      "back": "A method of calling on the community to pursue or report a suspected offender.",
-      "category": "Europe"
-    },
-    {
-      "front": "Thief-taker",
-      "back": "A person employed to catch thieves.",
-      "category": "Europe"
-    },
-    {
-      "front": "Bow Street Runners",
-      "back": "Early detective units mentioned in the lecture.",
-      "category": "Europe"
-    },
-    {
-      "front": "Municipal policing",
-      "back": "Government-supported policing organized for a city or municipality.",
-      "category": "Modern policing"
-    },
-    {
-      "front": "Territorial policing",
-      "back": "A strategy in which officers patrol assigned areas or beats, traditionally on foot.",
-      "category": "Modern policing"
-    },
-    {
-      "front": "Beat",
-      "back": "A prescribed patrol area assigned to an officer.",
-      "category": "Modern policing"
-    },
-    {
-      "front": "Disorder-control theory",
-      "back": "The theory that police departments developed to address riots and mob violence.",
-      "category": "United States"
-    },
-    {
-      "front": "Crime-control theory",
-      "back": "The theory that police departments developed in response to rising crime and fear of crime.",
-      "category": "United States"
-    },
-    {
-      "front": "Class-control theory",
-      "back": "The theory that police departments developed as a means of social and economic control that protected elite interests.",
-      "category": "United States"
-    },
-    {
-      "front": "Urban-dispersion theory",
-      "back": "The theory that police departments were an expected part of local government as cities developed.",
-      "category": "United States"
-    },
-    {
-      "front": "Sheriff",
-      "back": "An elected county law-enforcement official in the US lecture account, with civil and criminal duties.",
-      "category": "United States"
-    },
-    {
-      "front": "Marshal",
-      "back": "A town or city law-enforcement officer in the lecture’s description of US policing.",
-      "category": "United States"
-    },
-    {
-      "front": "Vigilance committee",
-      "back": "A voluntary organized group that responded to perceived threats and protected property or power.",
-      "category": "United States"
-    },
-    {
-      "front": "Vigilante",
-      "back": "A watchman or guard; in the lecture, a person involved in extralegal enforcement.",
-      "category": "United States"
-    },
-    {
-      "front": "Lynching",
-      "back": "A form of extrajudicial punishment described in the lecture, including hanging.",
-      "category": "United States"
-    },
-    {
-      "front": "Political Era",
-      "back": "A period dated 1840s–1930s, marked in the notes by political influence and fragmented local policing.",
-      "category": "Eras"
-    },
-    {
-      "front": "Reform / Professional Era",
-      "back": "A period dated 1930s–1980s, associated with centralized administration, specialization and professionalization.",
-      "category": "Eras"
-    },
-    {
-      "front": "Social Upheaval Era",
-      "back": "The 1960s–1970s period associated with civil rights activity, antiwar sentiment and urban riots.",
-      "category": "Eras"
-    },
-    {
-      "front": "Community Policing Era",
-      "back": "A period dated 1980s–2000s, emphasizing community relations, foot patrol and problem-solving.",
-      "category": "Eras"
-    },
-    {
-      "front": "Homeland Security Era",
-      "back": "A period dated 2001–present, associated in the notes with post-9/11 security and intelligence gathering.",
-      "category": "Eras"
-    },
-    {
-      "front": "Call box",
-      "back": "A communication device used to contact police before widespread mobile communications.",
-      "category": "Technology"
-    },
-    {
-      "front": "Teletype",
-      "back": "A teleprinter-based communication system listed among police technologies.",
-      "category": "Technology"
-    },
-    {
-      "front": "Computer-aided dispatch",
-      "back": "A computer system used to support the dispatching of police services.",
-      "category": "Technology"
-    },
-    {
-      "front": "Crime analysis",
-      "back": "The use of information and analysis to understand crime patterns and support policing.",
-      "category": "Technology"
-    },
-    {
-      "front": "FBI",
-      "back": "Federal Bureau of Investigation; established in 1908 and named in 1909 according to the notes.",
-      "category": "Technology"
+      "id": "policing-eras",
+      "title": "Eras of Policing",
+      "group": "Historical frameworks",
+      "type": "eras",
+      "chapterId": "crm123-s02",
+      "description": "Historical eras of policing as organized in the lecture notes.",
+      "items": [
+        {
+          "title": "Political Era",
+          "date": "1840s–1930s",
+          "description": "Political and social conflicts shaped policing in diverse cities.",
+          "points": [
+            "Lack of central authority to establish a mandate",
+            "Small departments acted independently within jurisdictions",
+            "Large departments were divided into precincts that often operated as individual departments",
+            "Officers represented the local political party more than the legal system",
+            "Conflict with rioters, union workers, management and looters"
+          ]
+        },
+        {
+          "title": "Reform / Professional Era",
+          "date": "1930s–1980s",
+          "description": "Partisan policing and fragmented services led to demands for reorganization and professionalization.",
+          "points": [
+            "Strong centralized administrative bureaucracy",
+            "Highly specialized units and increased numbers of officers",
+            "Hiring and promotion based on merit",
+            "Police role shifted toward crime fighting",
+            "Application of science to crime"
+          ]
+        },
+        {
+          "title": "Social Upheaval Era",
+          "date": "1960s–1970s",
+          "description": "Social and political upheaval brought police into the center of public conflict.",
+          "points": [
+            "Crime rate doubled, according to the lecture",
+            "Civil Rights Movement began",
+            "Antiwar sentiment and urban riots",
+            "Emphasis on education and training"
+          ]
+        },
+        {
+          "title": "Community Policing Era",
+          "date": "1980s–2000s",
+          "description": "The notes emphasize trust, recognizable officers, community problem-solving and new information systems.",
+          "points": [
+            "Increasing distrust",
+            "Foot patrol and recognizable officers over car patrols",
+            "Community relations programs developed in the 1960s",
+            "Problem-oriented and proactive policing",
+            "Community problem-solving and reduced social distance",
+            "Crime analysis, records management, computer-aided dispatch and 911"
+          ]
+        },
+        {
+          "title": "Homeland Security Era",
+          "date": "2001–present",
+          "description": "The post-9/11 period brought renewed emphasis on security and intelligence gathering.",
+          "points": [
+            "War on Terrorism",
+            "USA PATRIOT Act following 9/11",
+            "Gathering, processing and disseminating information",
+            "Return of an intelligence-gathering component"
+          ]
+        }
+      ]
     }
   ],
-  "readings": [
-    "Cox, S. M., Marchionna, S. & Fitch, B. D. (2017). Introduction to Policing. Los Angeles: SAGE Publications Inc.",
-    "Garrett, J. & O'Keete, P. H. (1984). “Taking a Bite Out of Crime”: The impact of a Mass Media Crime Prevention Campaign. Colorado: U.S. Department of Justice National Institute of Justice.",
-    "Greer, C. (2009). Crime and Media: A Reader (Routledge Student Readers). Oxon: Routledge.",
-    "Huda, N. (2009). Bangladesh Police: Issues and challenges. Dhaka: Dhaka University Press.",
-    "Jewkes, Y. (2011). Media & Crime. London: SAGE Publications.",
-    "Leonard J. (2000). Introduction to Policing and Police Powers. London: Cavendish Publishing Ltd.",
-    "McQuail, D. (2010). McQuail's Mass Communication Theory. London: SAGE Publications Ltd.",
-    "Noble, B. (2011). Media Impact: An Introduction to Mass Media. New Delhi: Cengage Learning.",
-    "Roberg, R.; Novak, K. & Cordner, G. (2005). Police & Society. Oxford University Press.",
-    "Reiner, R. (2007). Media Made Criminality: The Representation of Crime in the Mass Media. Oxford: Oxford University Press.",
-    "Surette, R. (2014). Media, crime, and criminal justice. New Delhi: Wadsworth Publishing."
+  "chapters": [
+    {
+      "id": "crm123-s01",
+      "title": "Policing and types of policing",
+      "order": 1,
+      "topics": [
+        "Definition",
+        "Pluralistic vs. class / elitist perspectives",
+        "Traditional commonsense definition",
+        "Use of force",
+        "Routine functions",
+        "Bureaucratic and administrative responsibilities",
+        "Criminal Justice System perspective",
+        "Relationship of police with state and society",
+        "Community policing",
+        "Problem-oriented policing",
+        "Private policing",
+        "Industrial policing",
+        "Intelligence-led policing"
+      ],
+      "noteIds": []
+    },
+    {
+      "id": "crm123-s02",
+      "title": "History of policing and eras of law enforcement",
+      "order": 2,
+      "topics": [
+        "Foundations of policing",
+        "Rise of Greek and Roman empires and onwards",
+        "Frankpledge system",
+        "Policing in England",
+        "Sir Robert Peel’s principles",
+        "Policing in the USA",
+        "Theories behind development of police departments",
+        "County sheriff and vigilance committee",
+        "Political Era",
+        "Reform / Professional Era",
+        "Community Era",
+        "Policing in the Indian subcontinent and Bangladesh Police"
+      ],
+      "noteIds": [
+        "origins",
+        "kin",
+        "greek-rome",
+        "nightwatch",
+        "england",
+        "peel",
+        "usa-theories",
+        "sheriff",
+        "vigilance",
+        "technology",
+        "eras"
+      ]
+    },
+    {
+      "id": "crm123-s03",
+      "title": "Relationship of police with state and society",
+      "order": 3,
+      "topics": [
+        "Democracy vs. police",
+        "Four types of policing",
+        "Expectation–Integration Model: community, police department and individual",
+        "Three possible types of police–community relationships",
+        "Police as crime fighter vs. social service worker"
+      ],
+      "noteIds": []
+    },
+    {
+      "id": "crm123-s04",
+      "title": "Theories of policing",
+      "order": 4,
+      "topics": [
+        "Rotten Apple theory",
+        "Blue Curtain theory",
+        "Broken windows theory",
+        "Merton’s theory of anomie"
+      ],
+      "noteIds": []
+    },
+    {
+      "id": "crm123-s05",
+      "title": "Police behavior and misconduct",
+      "order": 5,
+      "topics": [
+        "Perspectives of police behavior",
+        "Types of deviance and corruption",
+        "Definition, types and dimensions of police corruption",
+        "Constant factors: discretion, low managerial visibility, low public visibility, peer-group secrecy, managerial secrecy, status problems, association with law breakers",
+        "Variable factors: community structure, organizational characteristics, legal opportunities for corruption, corruption controls, social organization of corruption and moral cynicism"
+      ],
+      "noteIds": []
+    },
+    {
+      "id": "crm123-s06",
+      "title": "Role and functions of police",
+      "order": 6,
+      "topics": [
+        "Law enforcement",
+        "Peacekeeping and order maintenance",
+        "Crime prevention",
+        "Protecting civil rights",
+        "Delivery of services",
+        "Crime control",
+        "Crisis negotiation",
+        "Hostage negotiation"
+      ],
+      "noteIds": []
+    },
+    {
+      "id": "crm123-s07",
+      "title": "Crime control strategies",
+      "order": 7,
+      "topics": [
+        "“Friends that never recognized”",
+        "“Friend in need”",
+        "Preventive policing (patrol)",
+        "Community policing",
+        "Combating operation (anti-crime drive)"
+      ],
+      "noteIds": []
+    },
+    {
+      "id": "crm123-s08",
+      "title": "Police stress",
+      "order": 8,
+      "topics": [
+        "Concept of stress: acute and chronic",
+        "Cognitive, emotional, physical and behavioral symptoms",
+        "External and internal causes",
+        "Four types of stressors in police work",
+        "Officer stress and reactions",
+        "Sources of stress and officer stress responses",
+        "Costs and physiological signs of stress",
+        "Police officer coping skills",
+        "Policies and programs for stress management"
+      ],
+      "noteIds": []
+    },
+    {
+      "id": "crm123-s09",
+      "title": "Types of policing and police-related law",
+      "order": 9,
+      "topics": [
+        "Community policing and problem-oriented policing",
+        "SARA model",
+        "Police Act 1861: Sections 2, 2B, 2C, 7, 15A, 17, 18, 19, 22, 23, 29, 31, 34, 34A and 35",
+        "Police Reform Program (PRP) in Bangladesh"
+      ],
+      "noteIds": []
+    },
+    {
+      "id": "crm123-s10",
+      "title": "Police discretion",
+      "order": 10,
+      "topics": [
+        "Four styles of police behavior",
+        "Central principles of police culture",
+        "Decision-making",
+        "Factors impacting police discretion: organizational, neighborhood, situational and individual"
+      ],
+      "noteIds": []
+    },
+    {
+      "id": "crm123-s11",
+      "title": "Police organization, training and administration",
+      "order": 11,
+      "topics": [
+        "Management aspect of policing in Bangladesh",
+        "Police recruitment, training and management",
+        "Training Manual",
+        "Comparison of Bangladesh and other countries"
+      ],
+      "noteIds": []
+    },
+    {
+      "id": "crm123-s12",
+      "title": "Development of police force in Bangladesh",
+      "order": 12,
+      "topics": [
+        "Colonial legacy (1757–1947)",
+        "Pakistan period (1947–1971)",
+        "Bangladesh period (1972 to date)",
+        "Police reform as an imperative for improvement of law and order"
+      ],
+      "noteIds": []
+    }
   ]
 };
