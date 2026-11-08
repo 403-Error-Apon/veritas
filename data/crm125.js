@@ -5,7 +5,6 @@ window.STUDY_DATA.crm125 = {
   "title": "Principles of Economics",
   "credits": 4,
   "objective": "Introduces the tools and concepts of microeconomics and macroeconomics, including markets, consumer behavior, production, national income, money, policy, business cycles, inflation and unemployment.",
-  "studyReady": false,
   "syllabus": [
     {
       "title": "Introductory concepts",

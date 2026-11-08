@@ -5,7 +5,6 @@ window.STUDY_DATA.crm124 = {
   "title": "Psychology of Criminal Behavior",
   "credits": 4,
   "objective": "Introduces scientific and applied perspectives on criminal behavior, including its origins, aggression, psychopathy, crime and mental disorders, homicide, sexual assault, and legal-system applications, with attention to prediction, intervention and treatment.",
-  "studyReady": false,
   "syllabus": [
     {
       "title": "Introduction to criminal psychology",

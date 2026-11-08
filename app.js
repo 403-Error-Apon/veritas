@@ -36,11 +36,19 @@
     timeline: { chapter: 'all', subchapter: 'all', place: 'all', sort: 'course' },
     quiz: { chapter: 'all', subchapter: 'all' },
     flashcards: { chapter: 'all', subchapter: 'all', sort: 'shuffle' },
-    references: { chapter: 'all', subchapter: 'all' }
+    references: { chapter: 'all', subchapter: 'all', sort: 'course' }
   };
 
   const currentCourse = () => COURSE_CACHE[courseId] || null;
   const courseMeta = () => CATALOG[courseId] || {};
+  function hasStudyMaterials(course = currentCourse()) {
+    if (!course) return false;
+    return ['notes','terms','timeline','quiz','referenceSets'].some(key => Array.isArray(course[key]) && course[key].length > 0);
+  }
+  function hasPageMaterials(pageName, course = currentCourse()) {
+    const source = ({ notes:'notes', terms:'terms', timeline:'timeline', quiz:'quiz', flashcards:'terms', references:'referenceSets' })[pageName];
+    return !!source && Array.isArray(course?.[source]) && course[source].length > 0;
+  }
 
   function loadCourse(id) {
     if (COURSE_CACHE[id]) return Promise.resolve(COURSE_CACHE[id]);
@@ -84,7 +92,7 @@
     page = 'overview'; activeNoteId = ''; expandedChapters = new Set(); termQuery = ''; termPage = 1;
     Object.values(filters).forEach(state => { state.chapter='all'; state.subchapter='all'; });
     filters.terms.sort = 'az'; filters.timeline.place = 'all'; filters.timeline.sort = 'course'; filters.flashcards.sort = 'shuffle';
-    filters.references.chapter='all'; filters.references.subchapter='all';
+    filters.references.chapter='all'; filters.references.subchapter='all'; filters.references.sort='course';
     quizQuestions = []; quizIndex = 0; quizAnswers = []; selectedAnswer = null; quizLocked = false;
     flashDeck = []; flashIndex = 0; flashFlipped = false; flashDeckKey = ''; selectedReferenceSet = '';
   }
@@ -103,24 +111,24 @@
     const grouped = [
       { label:'COURSE', links:[{id:'overview',label:'Course overview',icon:'▦'}] }
     ];
-    if (c?.studyReady) {
-      grouped.push({ label:'STUDY', links:[{id:'notes',label:'Study notes',icon:'▤'}] });
-      grouped.push({ label:'REVISION', links:[
-        {id:'terms',label:'Key terms',icon:'Aa'},
-        {id:'timeline',label:'Timeline',icon:'↗'},
-        {id:'quiz',label:'Quiz practice',icon:'✓'},
-        {id:'flashcards',label:'Flashcards',icon:'▱'}
-      ]});
-      grouped.push({ label:'REFERENCE', links:[{id:'references',label:'Info Clusters',icon:'◫'}] });
+    if (c?.notes?.length) grouped.push({ label:'STUDY', links:[{id:'notes',label:'Study notes',icon:'▤'}] });
+    const revisionLinks = [];
+    if (c?.terms?.length) {
+      revisionLinks.push({id:'terms',label:'Key terms',icon:'Aa'});
+      revisionLinks.push({id:'flashcards',label:'Flashcards',icon:'▱'});
     }
+    if (c?.timeline?.length) revisionLinks.push({id:'timeline',label:'Timeline',icon:'↗'});
+    if (c?.quiz?.length) revisionLinks.push({id:'quiz',label:'Quiz practice',icon:'✓'});
+    if (revisionLinks.length) grouped.push({ label:'REVISION', links:revisionLinks });
+    if (c?.referenceSets?.length) grouped.push({ label:'REFERENCE', links:[{id:'references',label:'Info Clusters',icon:'◫'}] });
     $('#section-nav').innerHTML = grouped.map(group => `<div class="nav-group"><div class="side-label">${group.label}</div>${group.links.map(item=>`<button class="section-link ${page===item.id?'active':''}" data-page="${item.id}"><span class="section-symbol">${item.icon}</span><span>${item.label}</span></button>`).join('')}</div>`).join('');
     $('#breadcrumb-course').textContent = CATALOG[courseId]?.title || 'Loading course';
-    $('#global-search').placeholder = c?.studyReady ? `Search ${c.code}` : 'Search course syllabus';
+    $('#global-search').placeholder = hasStudyMaterials(c) ? `Search ${c.code}` : 'Search course syllabus';
   }
 
   function setPage(nextPage, noteId) {
     const studyPages = ['notes','terms','timeline','quiz','flashcards','references'];
-    if (studyPages.includes(nextPage) && !currentCourse()?.studyReady) nextPage = 'overview';
+    if (studyPages.includes(nextPage) && !hasPageMaterials(nextPage)) nextPage = 'overview';
     page = nextPage;
     if (noteId) {
       activeNoteId = noteId;
@@ -149,21 +157,27 @@
     $('#page-content').innerHTML = `${heading(c?.code || '', c?.title || 'Study materials')}<div class="empty-state"><div class="empty-icon">▤</div><h2>${escapeHTML(title)}</h2><p>${escapeHTML(body)}</p></div>`;
   }
 
+  function chapterForSyllabusUnit(unit, chapters) {
+    if (unit?.chapterId) {
+      const exact = chapters.find(chapter => chapter.id === unit.chapterId);
+      if (exact) return exact;
+    }
+    const titleKey = slug(unit?.title);
+    return titleKey ? chapters.find(chapter => slug(chapter.title) === titleKey) || null : null;
+  }
+
   function syllabusNoteForTopic(topic, chapter, c) {
-    const t=String(topic||'').toLowerCase();
-    const map=[
-      [/foundation|origin/,'origins'],[/greek|roman|empire/,'greek-rome'],[/frankpledge/,'england'],[/policing in england|nightwatch/,'nightwatch'],[/peel/,'peel'],[/policing in the usa|policing in usa/,'usa-theories'],[/theories behind development/,'usa-theories'],[/county sheriff|vigilance/,'sheriff'],[/political era|reform|professional era|community era/,'eras']
-    ];
-    const found=map.find(([pattern])=>pattern.test(t));
-    const noteId=found?.[1];
-    return noteId ? getNote(noteId,c) : null;
+    const noteId = chapter?.topicNoteMap?.[topic];
+    if (!noteId || !chapter.noteIds?.includes(noteId)) return null;
+    const note = getNote(noteId, c);
+    return note?.chapterId === chapter.id ? note : null;
   }
   function renderOverview() {
     const c = currentCourse();
     if (!c) return renderLoading();
     const chapters = getChapters(c);
     const syllabus=(c.syllabus||[]).map((unit,i)=>{
-      const chapter=chapters[i];
+      const chapter=chapterForSyllabusUnit(unit, chapters);
       const notes=chapter?.noteIds?.map(id=>getNote(id,c)).filter(Boolean)||[];
       const available=!!notes.length;
       return `<article class="syllabus-item syllabus-course-item ${available?'has-materials':'coming-soon'}">
@@ -172,19 +186,20 @@
           <small>${available?`${notes.length} study subchapters`:'Syllabus section'}</small><span class="chevron">${available?'→':'⌄'}</span>
         </button>
         <div class="syllabus-body"><div class="syllabus-topic-list">${unit.topics.map((topic,j)=>{
-          const note=chapter?.id===`crm123-s02` ? syllabusNoteForTopic(topic,chapter,c) : (notes.length===1?notes[0]:null);
-          return `<button type="button" class="syllabus-topic" data-syllabus-note="${escapeHTML(note?.id||'')}" data-syllabus-chapter="${escapeHTML(chapter?.id||'')}"><span>${String(j+1).padStart(2,'0')}</span>${escapeHTML(topic)}${note?'<b>Open notes →</b>':''}</button>`;
+          const note=chapter?.topicNoteMap ? syllabusNoteForTopic(topic,chapter,c) : (notes.length===1?notes[0]:null);
+          return `<button type="button" class="syllabus-topic" ${note?`data-syllabus-note="${escapeHTML(note.id)}"`:'disabled aria-disabled="true"'} data-syllabus-chapter="${escapeHTML(chapter?.id||'')}"><span>${String(j+1).padStart(2,'0')}</span>${escapeHTML(topic)}${note?'<b>Open notes →</b>':''}</button>`;
         }).join('')}</div>${available?`<button class="primary-button syllabus-open-notes" type="button" data-syllabus-chapter="${escapeHTML(chapter.id)}">Open ${escapeHTML(unit.title)} notes →</button>`:'<p class="syllabus-pending">Study notes for this syllabus section will be added gradually.</p>'}</div>
       </article>`;
     }).join('');
+    const readings = Array.isArray(c.readings) && c.readings.length ? `<section class="content-section readings-home"><div class="section-heading"><div><h2>Recommended readings</h2><p>Books and references listed for this course.</p></div><span class="section-count">${c.readings.length} SOURCES</span></div><ol class="reading-list">${c.readings.map(item=>`<li>${escapeHTML(item)}</li>`).join('')}</ol></section>` : '';
     $('#page-content').innerHTML = `${heading(`${c.code} · ${c.credits} CREDITS`,c.title,c.objective)}
-      <div class="course-meta-row"><span class="meta-chip"><span class="chip-dot"></span>${c.studyReady?'STUDY MATERIALS AVAILABLE':'SYLLABUS LOADED'}</span><span class="meta-chip">FIRST YEAR · SECOND SEMESTER</span></div>
-      <section class="content-section syllabus-home"><div class="section-heading"><div><h2>Course syllabus</h2><p>Choose a syllabus section to open its study material and subchapters.</p></div><span class="section-count">${c.syllabus?.length||0} SECTIONS</span></div><div class="syllabus-list">${syllabus}</div></section>`;
+      <div class="course-meta-row"><span class="meta-chip"><span class="chip-dot"></span>${hasStudyMaterials(c)?'STUDY MATERIALS AVAILABLE':'SYLLABUS LOADED'}</span><span class="meta-chip">FIRST YEAR · SECOND SEMESTER</span></div>
+      <section class="content-section syllabus-home"><div class="section-heading"><div><h2>Course syllabus</h2><p>Choose a syllabus section to open its study material and subchapters.</p></div><span class="section-count">${c.syllabus?.length||0} SECTIONS</span></div><div class="syllabus-list">${syllabus}</div></section>${readings}`;
   }
 
   function renderNotes() {
     const c=currentCourse();
-    if (!c?.studyReady || !c.notes?.length) return renderEmpty('Study notes are not available yet.','The course syllabus is available. Study notes and revision materials will be added as the course is covered.');
+    if (!c?.notes?.length) return renderEmpty('Study notes are not available yet.','The course syllabus is available. Study notes and revision materials will be added as the course is covered.');
     const chapters=getChapters(c);
     const allNotes=noteOrder(c);
     if (!activeNoteId || !getNote(activeNoteId,c)) activeNoteId=allNotes[0]?.id || '';
@@ -253,8 +268,8 @@
     if (!events.length) return renderEmpty('No timeline entries added yet.','Important dates and developments will be added as this course is prepared.');
     let filtered=applyTaxonomy(events,filters.timeline);
     if (filters.timeline.place!=='all') filtered=filtered.filter(e=>e.place===filters.timeline.place);
-    if (filters.timeline.sort==='oldest') filtered.sort((a,b)=>(a.dateOrder??a.order)-(b.dateOrder??b.order));
-    if (filters.timeline.sort==='newest') filtered.sort((a,b)=>(b.dateOrder??b.order)-(a.dateOrder??a.order));
+    if (filters.timeline.sort==='oldest') filtered.sort((a,b)=>(a.dateOrder??a.order??0)-(b.dateOrder??b.order??0));
+    if (filters.timeline.sort==='newest') filtered.sort((a,b)=>(b.dateOrder??b.order??0)-(a.dateOrder??a.order??0));
     if (filters.timeline.sort==='course') filtered.sort((a,b)=>(a.order??0)-(b.order??0));
     if (filters.timeline.sort==='az') filtered.sort((a,b)=>a.title.localeCompare(b.title));
     const places=['all',...new Set(events.map(e=>e.place))];
@@ -264,21 +279,30 @@
       <div class="timeline-list">${filtered.map(e=>`<div class="timeline-event"><div class="timeline-date">${escapeHTML(e.date)}</div><span class="timeline-dot"></span><div class="timeline-content"><div class="timeline-text"><h3>${escapeHTML(e.title)}</h3><p>${escapeHTML(e.detail)}</p><small class="timeline-context">${escapeHTML(chapterTitle(e.chapterId,c))} · ${escapeHTML(noteTitle(e.subchapterId,c))}</small></div><span class="timeline-place">${escapeHTML(e.place)}</span></div></div>`).join('')||'<div class="empty-state"><h2>No events in this selection</h2><p>Choose a different chapter or subchapter.</p></div>'}</div>`;
   }
 
+  function dateSortValue(item) {
+    if (Number.isFinite(item.dateOrder)) return item.dateOrder;
+    const match = String(item.date || '').match(/\d{3,4}/);
+    return match ? Number(match[0]) : Number.POSITIVE_INFINITY;
+  }
+
   function renderReferences() {
     const c=currentCourse(); const sets=c?.referenceSets||[];
     if (!sets.length) return renderEmpty('No reference sets added yet.','Principles, historical eras, models and other reference material will appear here as they are covered.');
     if (!sets.some(set=>set.id===selectedReferenceSet)) selectedReferenceSet=sets[0].id;
     const set=sets.find(item=>item.id===selectedReferenceSet);
-    const sort=window.referenceSort || 'course';
-    let items=applyTaxonomy(set.items.map(item=>({...item,chapterId:item.chapterId||set.chapterId,subchapterId:item.subchapterId||(set.id==='peel-principles'?'peel':'eras')})),filters.references);
+    const hasDates=set.items.some(item=>item.date || Number.isFinite(item.dateOrder));
+    if (!hasDates && filters.references.sort.startsWith('date-')) filters.references.sort='course';
+    const sort=filters.references.sort;
+    let items=applyTaxonomy(set.items.map(item=>({...item,chapterId:item.chapterId||set.chapterId,subchapterId:item.subchapterId||set.subchapterId||(set.type==='principles'?'peel':'eras')})),filters.references);
     if (sort==='az') items.sort((a,b)=>a.title.localeCompare(b.title));
     if (sort==='za') items.sort((a,b)=>b.title.localeCompare(a.title));
-    if (sort==='date-oldest') items.sort((a,b)=>(a.order??0)-(b.order??0));
-    if (sort==='date-newest') items.sort((a,b)=>(b.order??0)-(a.order??0));
+    if (sort==='date-oldest') items.sort((a,b)=>dateSortValue(a)-dateSortValue(b) || (a.order??a.number??0)-(b.order??b.number??0));
+    if (sort==='date-newest') items.sort((a,b)=>dateSortValue(b)-dateSortValue(a) || (b.order??b.number??0)-(a.order??a.number??0));
     const isPrinciples=set.type==='principles';
+    const referenceSortOptions=[['course','Original order'],['az','A to Z'],['za','Z to A'],...(hasDates?[['date-oldest','Chronological · oldest first'],['date-newest','Chronological · newest first']]:[])];
     $('#page-content').innerHTML=`${heading('INFO CLUSTERS','Info Clusters','Sortable collections of principles, eras, models and other structured reference material.')}
       ${taxonomyControls('references')}<div class="reference-toolbar"><label class="taxonomy-field"><span>Reference set</span><select id="reference-set">${sets.map(s=>`<option value="${escapeHTML(s.id)}" ${s.id===set.id?'selected':''}>${escapeHTML(s.title)}</option>`).join('')}</select></label>
-      ${sortSelect('reference-sort',sort,[['course','Original order'],['az','A to Z'],['za','Z to A'],['date-oldest','Chronological · oldest first'],['date-newest','Chronological · newest first']])}
+      ${sortSelect('reference-sort',sort,referenceSortOptions)}
       <div class="reference-count">${items.length} ITEMS <span>·</span> ${escapeHTML(set.group)}</div></div>
       <div class="reference-intro"><strong>${escapeHTML(set.title)}</strong><p>${escapeHTML(set.description||'')}</p></div>
       <div class="reference-grid">${items.map(item=>isPrinciples?`<article class="reference-card principle-reference-card"><button type="button" class="reference-toggle"><span class="reference-index">PRINCIPLE ${item.number||item.order}</span><strong>${escapeHTML(item.title)}</strong><span class="reference-summary">${escapeHTML(item.summary)}</span><span class="reference-expand">Read full principle +</span></button><div class="reference-detail">${escapeHTML(item.detail)}</div></article>`:`<article class="reference-card era-reference-card"><button type="button" class="reference-toggle"><span class="reference-index">${escapeHTML(item.date||`ERA ${item.order}`)}</span><strong>${escapeHTML(item.title)}</strong><span class="reference-summary">${escapeHTML(item.description)}</span><span class="reference-points">${(item.points||[]).length} key features</span><span class="reference-expand">Show key features +</span></button><ul class="reference-detail">${(item.points||[]).map(point=>`<li>${escapeHTML(point)}</li>`).join('')}</ul></article>`).join('')}</div>`;
@@ -400,6 +424,8 @@
   }
 
   document.addEventListener('click', event => {
+    const homeLink=event.target.closest('[data-home]');
+    if(homeLink){event.preventDefault();setPage('overview');return;}
     const courseButton=event.target.closest('[data-course]');
     if(courseButton){activateCourse(courseButton.dataset.course);return;}
     const syllabusChapter=event.target.closest('[data-syllabus-chapter]');
@@ -415,7 +441,7 @@
     const chapterToggle=event.target.closest('[data-chapter-toggle]');
     if(chapterToggle){const id=chapterToggle.dataset.chapterToggle;if(expandedChapters.has(id))expandedChapters.clear();else expandedChapters=new Set([id]);renderNotes();return;}
     const syllabusNote=event.target.closest('[data-syllabus-note]');
-    if(syllabusNote){const noteId=syllabusNote.dataset.syllabusNote;if(noteId){setPage('notes',noteId);}else{const chapterId=syllabusNote.dataset.syllabusChapter;const chapter=getChapter(chapterId);if(chapter?.noteIds?.length)setPage('notes',chapter.noteIds[0]);}return;}
+    if(syllabusNote){const noteId=syllabusNote.dataset.syllabusNote;if(noteId)setPage('notes',noteId);return;}
     const syllabusButton=event.target.closest('.syllabus-toggle');
     if(syllabusButton){const item=syllabusButton.closest('.syllabus-item');const open=item.classList.toggle('open');syllabusButton.setAttribute('aria-expanded',String(open));return;}
     const termPageButton=event.target.closest('[data-term-page]');if(termPageButton){termPage=Math.max(1,termPage+(termPageButton.dataset.termPage==='next'?1:-1));renderTerms();return;}
@@ -462,7 +488,7 @@
     if(event.target.id==='quiz-length'){quizLength=event.target.value;renderQuizSetup();return;}
     if(event.target.id==='flashcard-sort'){filters.flashcards.sort=event.target.value;renderFlashcards(true);return;}
     if(event.target.id==='reference-set'){selectedReferenceSet=event.target.value;renderReferences();return;}
-    if(event.target.id==='reference-sort'){window.referenceSort=event.target.value;renderReferences();return;}
+    if(event.target.id==='reference-sort'){filters.references.sort=event.target.value;renderReferences();return;}
   });
   $('#global-search').addEventListener('focus',()=>openSearch($('#global-search').value));
   $('.search-box').addEventListener('click',()=>{if(document.activeElement!==$('#global-search'))openSearch('');});
@@ -471,6 +497,35 @@
     if(event.key==='Escape'){closeSearch();$('#sidebar').classList.remove('open');$('#sidebar-shade').classList.remove('visible');}
     if(event.key==='Enter'&&document.activeElement.id==='flashcard'){event.preventDefault();flashFlipped=!flashFlipped;renderFlashcard();}
   });
+  // Disable the page context menu and common DevTools shortcuts on desktop
+const isDesktopMode = window.matchMedia(
+  '(hover: hover) and (pointer: fine)'
+).matches;
+
+if (isDesktopMode) {
+  // Disable right-click context menu
+  document.addEventListener('contextmenu', (event) => {
+    event.preventDefault();
+  });
+
+  // Block common keyboard shortcuts for Developer Tools
+  document.addEventListener('keydown', (event) => {
+    const key = event.key.toLowerCase();
+
+    const inspectShortcut =
+      event.key === 'F12' ||
+      ((event.ctrlKey || event.metaKey) &&
+        event.shiftKey &&
+        ['i', 'j', 'c'].includes(key)) ||
+      (event.metaKey && event.altKey &&
+        ['i', 'j', 'c'].includes(key));
+
+    if (inspectShortcut) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+  }, true);
+}
 
   render();
   loadCourse(courseId).then(render).catch(error=>{

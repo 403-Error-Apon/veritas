@@ -5,7 +5,6 @@ window.STUDY_DATA.crm122 = {
   "title": "Introduction to Criminal Justice",
   "credits": 4,
   "objective": "Introduces how the criminal justice system works and how its components respond to crime control, with attention to criminal justice in Bangladesh.",
-  "studyReady": false,
   "syllabus": [
     {
       "title": "Introduction",
