@@ -497,35 +497,6 @@
     if(event.key==='Escape'){closeSearch();$('#sidebar').classList.remove('open');$('#sidebar-shade').classList.remove('visible');}
     if(event.key==='Enter'&&document.activeElement.id==='flashcard'){event.preventDefault();flashFlipped=!flashFlipped;renderFlashcard();}
   });
-  // Disable the page context menu and common DevTools shortcuts on desktop
-const isDesktopMode = window.matchMedia(
-  '(hover: hover) and (pointer: fine)'
-).matches;
-
-if (isDesktopMode) {
-  // Disable right-click context menu
-  document.addEventListener('contextmenu', (event) => {
-    event.preventDefault();
-  });
-
-  // Block common keyboard shortcuts for Developer Tools
-  document.addEventListener('keydown', (event) => {
-    const key = event.key.toLowerCase();
-
-    const inspectShortcut =
-      event.key === 'F12' ||
-      ((event.ctrlKey || event.metaKey) &&
-        event.shiftKey &&
-        ['i', 'j', 'c'].includes(key)) ||
-      (event.metaKey && event.altKey &&
-        ['i', 'j', 'c'].includes(key));
-
-    if (inspectShortcut) {
-      event.preventDefault();
-      event.stopPropagation();
-    }
-  }, true);
-}
 
   render();
   loadCourse(courseId).then(render).catch(error=>{

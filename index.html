@@ -6,6 +6,15 @@
   <meta name="theme-color" content="#f4f6f4">
   <meta name="description" content="A focused study workspace for Year 1, Semester 2 criminology courses.">
   <title>Study Desk · Year 1 Semester 2</title>
+  <script>
+    (() => {
+      try {
+        const saved = localStorage.getItem('study-desk-theme');
+        const systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.dataset.theme = saved || (systemDark ? 'dark' : 'light');
+      } catch (_) { document.documentElement.dataset.theme = 'light'; }
+    })();
+  </script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -34,6 +43,7 @@
         <button class="mobile-menu" id="mobile-menu" aria-label="Open course navigation">☰</button>
         <div class="breadcrumb"><span>Year 1</span><i>/</i><span>Semester 2</span><i>/</i><strong id="breadcrumb-course">Introduction to Policing</strong></div>
         <div class="topbar-tools">
+          <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" title="Switch to dark mode"><span aria-hidden="true">☾</span></button>
           <label class="search-box" for="global-search"><span class="search-icon">⌕</span><input id="global-search" type="search" placeholder="Search this course" autocomplete="off"><kbd>/</kbd></label>
         </div>
       </header>
@@ -55,5 +65,6 @@
 
   <script src="data/catalog.js"></script>
   <script src="app.js"></script>
+  <script src="theme.js"></script>
 </body>
 </html>

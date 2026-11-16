@@ -430,3 +430,253 @@ body { font-size: 16px; }
 .reading-list li { padding: 11px 14px; border: 1px solid var(--line); border-radius: 9px; background: #fff; font-size: 12px; line-height: 1.65; }
 .syllabus-topic:disabled { cursor: not-allowed; opacity: .72; }
 .syllabus-topic:disabled:hover { background: rgba(80,110,95,.055); }
+
+
+/* ---------------------------------------------------------------
+   Neutral dark mode — graphite surfaces, soft neutral text,
+   and restrained blue-grey interaction highlights.
+   --------------------------------------------------------------- */
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #14171b;
+  --surface: #1c2026;
+  --surface-soft: #252b32;
+  --ink: #e8ebef;
+  --ink-2: #c4cbd3;
+  --muted: #969faa;
+  --line: #303740;
+  --line-strong: #444d58;
+  --green: #9eb5cb;
+  --green-dark: #bfd0e0;
+  --green-soft: #293542;
+  --amber-soft: #3a3025;
+  --blue-soft: #283746;
+  --red-soft: #3b2c2d;
+  --shadow: 0 8px 26px rgba(0, 0, 0, .24);
+}
+html[data-theme="dark"] body { background: var(--paper); color: var(--ink); }
+html[data-theme="dark"] .sidebar,
+html[data-theme="dark"] .meta-chip,
+html[data-theme="dark"] .stat-card,
+html[data-theme="dark"] .syllabus-item,
+html[data-theme="dark"] .syllabus-toggle,
+html[data-theme="dark"] .notes-index,
+html[data-theme="dark"] .notes-article,
+html[data-theme="dark"] .taxonomy-toolbar,
+html[data-theme="dark"] .inline-search,
+html[data-theme="dark"] .filter-pill,
+html[data-theme="dark"] .term-card,
+html[data-theme="dark"] .timeline-content,
+html[data-theme="dark"] .quiz-setup,
+html[data-theme="dark"] .quiz-panel,
+html[data-theme="dark"] .quiz-result,
+html[data-theme="dark"] .answer-option,
+html[data-theme="dark"] .review-card,
+html[data-theme="dark"] .flashcard,
+html[data-theme="dark"] .flash-controls button,
+html[data-theme="dark"] .search-results-panel,
+html[data-theme="dark"] .search-results-panel > input,
+html[data-theme="dark"] .reference-toolbar,
+html[data-theme="dark"] .reference-card,
+html[data-theme="dark"] .chapter-overview-card,
+html[data-theme="dark"] .reading-list li {
+  background: var(--surface);
+  border-color: var(--line);
+}
+html[data-theme="dark"] .topbar { background: rgba(28, 32, 38, .94); border-color: var(--line); }
+html[data-theme="dark"] .search-box,
+html[data-theme="dark"] kbd,
+html[data-theme="dark"] .section-symbol,
+html[data-theme="dark"] .syllabus-toggle:hover,
+html[data-theme="dark"] .course-button:hover,
+html[data-theme="dark"] .section-link:hover,
+html[data-theme="dark"] .note-index-button:hover,
+html[data-theme="dark"] .search-result:hover,
+html[data-theme="dark"] .search-panel-head button,
+html[data-theme="dark"] .timeline-place,
+html[data-theme="dark"] .chapter-tree-count,
+html[data-theme="dark"] .progress-track,
+html[data-theme="dark"] .flash-progress,
+html[data-theme="dark"] .quiz-setup-side,
+html[data-theme="dark"] .option-letter,
+html[data-theme="dark"] .flashcard.flipped,
+html[data-theme="dark"] .empty-icon {
+  background: var(--surface-soft);
+}
+html[data-theme="dark"] .course-button.active,
+html[data-theme="dark"] .section-link.active,
+html[data-theme="dark"] .note-index-button.active,
+html[data-theme="dark"] .filter-pill.active {
+  color: var(--green-dark);
+  background: var(--green-soft);
+}
+html[data-theme="dark"] .section-link.active .section-symbol { color: var(--green-dark); background: #354352; }
+html[data-theme="dark"] .course-button.active .course-code { color: #aebfd0; }
+html[data-theme="dark"] .section-link { color: #c0c7cf; }
+html[data-theme="dark"] .section-symbol { color: #aab3be; }
+html[data-theme="dark"] .side-label,
+html[data-theme="dark"] .meta-chip,
+html[data-theme="dark"] .breadcrumb,
+html[data-theme="dark"] .page-heading p,
+html[data-theme="dark"] .stat-label,
+html[data-theme="dark"] .section-count,
+html[data-theme="dark"] .syllabus-num,
+html[data-theme="dark"] .syllabus-toggle small,
+html[data-theme="dark"] .syllabus-toggle .chevron,
+html[data-theme="dark"] .syllabus-body ul,
+html[data-theme="dark"] .index-heading,
+html[data-theme="dark"] .note-index-button .index-no,
+html[data-theme="dark"] .note-index-button small,
+html[data-theme="dark"] .article-intro,
+html[data-theme="dark"] .article-section p,
+html[data-theme="dark"] .article-section ul,
+html[data-theme="dark"] .article-footer button,
+html[data-theme="dark"] .inline-search span,
+html[data-theme="dark"] .result-count,
+html[data-theme="dark"] .filter-pill,
+html[data-theme="dark"] .term-category,
+html[data-theme="dark"] .term-card small,
+html[data-theme="dark"] .term-definition,
+html[data-theme="dark"] .timeline-date,
+html[data-theme="dark"] .timeline-text p,
+html[data-theme="dark"] .timeline-place,
+html[data-theme="dark"] .taxonomy-course,
+html[data-theme="dark"] .taxonomy-course-code,
+html[data-theme="dark"] .taxonomy-field,
+html[data-theme="dark"] .sort-field,
+html[data-theme="dark"] .quiz-setup-main p,
+html[data-theme="dark"] .field-label,
+html[data-theme="dark"] .quiz-progress-top,
+html[data-theme="dark"] .question-type,
+html[data-theme="dark"] .answer-option,
+html[data-theme="dark"] .option-letter,
+html[data-theme="dark"] .result-note,
+html[data-theme="dark"] .review-card p,
+html[data-theme="dark"] .flashcard-count,
+html[data-theme="dark"] .flashcard-category,
+html[data-theme="dark"] .flashcard-side-label,
+html[data-theme="dark"] .flashcard p,
+html[data-theme="dark"] .flash-hint,
+html[data-theme="dark"] .empty-state p,
+html[data-theme="dark"] .search-hint,
+html[data-theme="dark"] .search-result small,
+html[data-theme="dark"] .search-result-type,
+html[data-theme="dark"] .search-panel-head button,
+html[data-theme="dark"] .reference-intro p,
+html[data-theme="dark"] .reference-summary,
+html[data-theme="dark"] .reference-detail,
+html[data-theme="dark"] .reference-points,
+html[data-theme="dark"] .chapter-overview-card small,
+html[data-theme="dark"] .reading-list {
+  color: #b2bac4;
+}
+html[data-theme="dark"] .page-heading h1,
+html[data-theme="dark"] .section-heading h2,
+html[data-theme="dark"] .syllabus-toggle strong,
+html[data-theme="dark"] .notes-article h2,
+html[data-theme="dark"] .article-section h3,
+html[data-theme="dark"] .term-card strong,
+html[data-theme="dark"] .timeline-text h3,
+html[data-theme="dark"] .quiz-setup-main h2,
+html[data-theme="dark"] .quiz-question,
+html[data-theme="dark"] .review-card strong,
+html[data-theme="dark"] .flashcard h2,
+html[data-theme="dark"] .empty-state h2,
+html[data-theme="dark"] .search-panel-head strong,
+html[data-theme="dark"] .search-result strong,
+html[data-theme="dark"] .reference-intro strong,
+html[data-theme="dark"] .reference-card > strong,
+html[data-theme="dark"] .reference-toggle > strong,
+html[data-theme="dark"] .chapter-tree-title,
+html[data-theme="dark"] .chapter-overview-card strong,
+html[data-theme="dark"] .pagination strong {
+  color: var(--ink);
+}
+html[data-theme="dark"] .article-section li,
+html[data-theme="dark"] .syllabus-topic,
+html[data-theme="dark"] .reading-list li { color: #c4cad2; }
+html[data-theme="dark"] .taxonomy-field select,
+html[data-theme="dark"] .sort-field select,
+html[data-theme="dark"] .field-label select {
+  background: #191e24;
+  color: var(--ink);
+  border-color: var(--line-strong);
+}
+html[data-theme="dark"] input { color: var(--ink); }
+html[data-theme="dark"] input::placeholder,
+html[data-theme="dark"] .search-box input::placeholder { color: #89939f; }
+html[data-theme="dark"] .page-heading h1 { color: #edf0f3; }
+html[data-theme="dark"] .stat-value,
+html[data-theme="dark"] .semester-credit strong,
+html[data-theme="dark"] .result-score { color: #bfd0e0; }
+html[data-theme="dark"] .chapter-tree-group { border-color: transparent; background: transparent; }
+html[data-theme="dark"] .chapter-tree-group.open { border-color: var(--line); background: #222831; }
+html[data-theme="dark"] .chapter-tree-title { color: #d5dbe2; }
+html[data-theme="dark"] .chapter-tree-count { color: #b6c0cb; }
+html[data-theme="dark"] .note-index-button strong { color: #c8cfd7; }
+html[data-theme="dark"] .note-index-button.active strong { color: #d0deeb; }
+html[data-theme="dark"] .timeline-list::before { background: #414a55; }
+html[data-theme="dark"] .breadcrumb i { color: #737e89; }
+html[data-theme="dark"] .progress-track,
+html[data-theme="dark"] .flash-progress { background: #333b45; }
+html[data-theme="dark"] .timeline-dot { border-color: var(--surface); box-shadow: 0 0 0 1px #71869b; }
+html[data-theme="dark"] .quiz-setup-side { border-color: var(--line); }
+html[data-theme="dark"] .primary-button { background: #40566d; border-color: #40566d; color: #f5f7f9; }
+html[data-theme="dark"] .primary-button:hover { background: #4d6681; }
+html[data-theme="dark"] .secondary-button,
+html[data-theme="dark"] .article-footer button,
+html[data-theme="dark"] .flash-controls button,
+html[data-theme="dark"] .pagination button {
+  background: #252b32;
+  color: #cbd2da;
+  border-color: var(--line-strong);
+}
+html[data-theme="dark"] .answer-option.selected { background: #2b3948; border-color: #718ca8; color: #edf2f7; }
+html[data-theme="dark"] .answer-option.correct { background: #26382f; border-color: #638b74; color: #c6e0d0; }
+html[data-theme="dark"] .answer-option.wrong { background: #402d2e; border-color: #a66d70; color: #f0c8ca; }
+html[data-theme="dark"] .answer-feedback { background: #26382f; color: #c6e0d0; }
+html[data-theme="dark"] .answer-feedback.incorrect { background: #402d2e; color: #e4b9bb; }
+html[data-theme="dark"] .flashcard { border-color: #3d4651; box-shadow: 0 10px 34px rgba(0,0,0,.24); }
+html[data-theme="dark"] .flashcard.flipped { background: #252d36; border-color: #657b91; }
+html[data-theme="dark"] .empty-state { background: rgba(28,32,38,.72); border-color: #4a535e; }
+html[data-theme="dark"] .search-backdrop { background: rgba(0,0,0,.66); }
+html[data-theme="dark"] .search-results-panel { box-shadow: 0 24px 80px rgba(0,0,0,.48); }
+html[data-theme="dark"] .search-result { color: var(--ink); }
+html[data-theme="dark"] .reference-card:hover,
+html[data-theme="dark"] .chapter-overview-card:hover { border-color: #657b91; }
+html[data-theme="dark"] .reference-expand { color: #bfd0e0; }
+html[data-theme="dark"] .syllabus-topic { background: rgba(150,170,192,.09); }
+html[data-theme="dark"] .syllabus-topic:hover { background: rgba(150,170,192,.15); }
+html[data-theme="dark"] .syllabus-topic:disabled:hover { background: rgba(150,170,192,.09); }
+html[data-theme="dark"] .pagination { border-color: var(--line); }
+html[data-theme="dark"] .reading-list li { background: var(--surface); border-color: var(--line); }
+html[data-theme="dark"] .loading-state { color: #b2bac4; }
+html[data-theme="dark"] .loading-spinner { border-color: #3a424c; border-top-color: #9eb5cb; }
+
+.theme-toggle {
+  display: inline-grid;
+  place-items: center;
+  flex: 0 0 36px;
+  width: 36px;
+  height: 34px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--ink-2);
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+  transition: background .16s ease, border-color .16s ease, color .16s ease;
+}
+.theme-toggle:hover { border-color: var(--line-strong); background: var(--surface-soft); color: var(--ink); }
+.theme-toggle:focus-visible { outline: 3px solid rgba(112,166,145,.35); outline-offset: 2px; }
+html[data-theme="dark"] .theme-toggle { background: #252b32; border-color: #444d58; color: #cbd2da; }
+html[data-theme="dark"] .theme-toggle:hover { background: #303944; }
+@media (prefers-reduced-motion: no-preference) {
+  body, .sidebar, .topbar, .stat-card, .syllabus-item, .notes-index, .notes-article,
+  .term-card, .timeline-content, .quiz-panel, .quiz-setup, .quiz-result, .flashcard,
+  .reference-card, .chapter-overview-card { transition: background-color .16s ease, color .16s ease, border-color .16s ease; }
+}
+
+html[data-theme="dark"] .theme-toggle:focus-visible { outline-color: rgba(158,181,203,.45); }
